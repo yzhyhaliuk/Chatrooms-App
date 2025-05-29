@@ -1,0 +1,17 @@
+# Node.js
+node_modules/
+dist/
+build/
+.env
+
+# Vite/React
+.vite/
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
