@@ -15,14 +15,14 @@ function RoomList({ rooms, onCreate, onJoin, onDelete, onRename, currentRoom }) 
             {currentRoom !== room && (
               <button onClick={() => onJoin(room)}>Увійти</button>
             )}
-            <button onClick={() => onDelete(room)}>🗑</button>
+            <button onClick={() => onDelete(room)}>❌</button>
             <input
               type='text'
-              placeholder='Нова назва'
+              placeholder='Змінити назву'
               value={renames[room] || ''}
               onChange={(e) => setRenames((prev) => ({ ...prev, [room]: e.target.value }))}
             />
-            <button onClick={() => onRename(room, renames[room])}>✏</button>
+            <button onClick={() => onRename(room, renames[room])}>✔️</button>
           </li>
         ))}
       </ul>
@@ -30,7 +30,7 @@ function RoomList({ rooms, onCreate, onJoin, onDelete, onRename, currentRoom }) 
       <div className='create_room'>
         <input
           type='text'
-          placeholder='Назва нової кімнати'
+          placeholder='Створити кімнату'
           value={newRoom}
           onChange={(e) => setNewRoom(e.target.value)}
         />

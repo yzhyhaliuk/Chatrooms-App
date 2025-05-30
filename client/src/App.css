@@ -5,4 +5,5 @@
   background-position: center;
   background-repeat: no-repeat;
   padding: 20px;
+  box-sizing: border-box;
 }
